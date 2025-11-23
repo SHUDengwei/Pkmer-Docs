@@ -1,13 +1,13 @@
 ---
 uid: 20230521003527
 title: Obsidian 基础操作
-tags: [Obsidian, 主题, 常见问题, 示例库, Bluetopaz, CSS]
+tags: [Obsidian, 主题, 常见问题, 示例库, Bluetopaz, CSS, faq]
 description: Obsidian 基础操作常见问题汇总
 author: PKMer
 type: other
 draft: false
 editable: false
-modified: 20231214144142
+modified: 20250314144457
 ---
 
 # Obsidian 基础操作
@@ -54,6 +54,12 @@ Obsidian 的主题问题、css 样式片段 snippets、插件都是隐藏在 `.o
 
 - Win：直接在资源管理器中修改文件夹选项，显示隐藏文件即可
 - Mac：注意，`.obsidian` 文件夹可能是隐藏的。在 macOS 上，您可以按 `Command+Shift+.` 来在 Finder 中显示该文件夹。
+
+### 如何打开 Obsidian 沙箱仓库 (by 熊猫)
+
+点击仓库旁边的问号按钮，在弹出的对话框里面有沙箱仓库选项。
+
+![24.11.25_ObsidianFAQ整理记录.md](https://cdn.pkmer.cn/images/202412091459911.png!pkmer)
 
 ## Obsidian 的基本信息获取
 
@@ -179,6 +185,35 @@ Obsidian 能否像其他软件一样，常驻在系统托盘
 
 ## 显示&输入
 
+### 如何隐藏 Obsidian 侧边的某些按钮 (by 熊猫 23.12.15)
+
+![24.12.14_ObsidianFAQ整理记录.md](https://cdn.pkmer.cn/images/202412141718887.png!pkmer)
+
+答：
+
+1. Ob 自带：直接在侧边栏空白处鼠标右键会弹出一个按钮面板，取消掉✔就可以隐藏掉
+	1. 在设置中也可以找到
+	   ![24.12.14_ObsidianFAQ整理记录.md](https://cdn.pkmer.cn/images/202412141718278.png!pkmer)
+	   ![24.12.14_ObsidianFAQ整理记录.md](https://cdn.pkmer.cn/images/202412141718688.png!pkmer)
+2. Ob 插件：commander 插件支持隐藏侧边栏按钮，以及定义其他按钮
+   ![24.12.14_ObsidianFAQ整理记录.md](https://cdn.pkmer.cn/images/202412141718119.png!pkmer)
+
+### 如何调整页面宽度，扩大笔记页面两端的内容 (by 熊猫)
+
+![24.12.14_ObsidianFAQ整理记录.md](https://cdn.pkmer.cn/images/202412141718527.png!pkmer)
+
+答：
+
+1. 在 PKMer Market 或者插件市场里面搜索 Editor Width Slider 就可以下载，这个插件可以用来通过滚轮调整页面宽度
+2. [Obsidian 插件：Editor Width Slider 帮你快速自定义笔记的栏宽]([https://pkmer.cn/show/20230720000017](https://pkmer.cn/show/20230720000017) )
+3. 通过 CSS 来修改：
+
+	```css
+	div.cm-scroller {
+	--file-line-width: 1080px;
+	}
+	```
+
 ### Obsidian 为什么不能重命名文件名
 
 - 问题：我想重命名文件名为“LC-MS/MS”，但弹出错误
@@ -301,13 +336,13 @@ Obsidian 的笔记中，标题可以显示当前标题等级。
 - 或许是因为你当前使用的主题各级标题字号不够明显；
 - 或许是因为你的标题没有自动编号（如何自动编号参考这里 [[Obsidian基础操作问题#Obsidian 中实现标题自动编号，像 Word 一样]]）；
 - 插件法
-	- 使用 [[Obsidian 插件：Lapel 为你显示标题等级]]
+	- 使用 [[lapel|Obsidian 插件：Lapel 为你显示标题等级]]
 - 主题法
 	- 一些主题默认支持显示标题等级，或是提供了对应的设置选项。如 [[Blue Topaz]] 等。
 - CSS 样式法
 	- 当然你可能有你偏爱的主题，不想因此更欢主题。那么可以选择使用独立的 CSS 片段。
 
-如何使用独立 CSS 片段，可以参考 [[02、Obsidian 的 Snippets]]
+如何使用独立 CSS 片段，可以参考 [[Obsidian的CSS代码片段]]
 
 ```CSS
 /*使用H1-H6 代替#号来显示标题等级*/
@@ -425,6 +460,39 @@ body.clutter-free-headings div.mod-cm6:not(.is-live-preview) div:not(.cm-active)
 }
 ```
 
+### 网页上粘贴的文档，有很多空格，如何去除多余空格 (by 龙 23.12.12)
+
+答：
+
+1. 网站上的粘贴可以用 Ctrl + Shift +V 进行原格式粘贴，Ctrl + V 会嵌入网站文本格式 (by Huajin 23.12.12)
+2. 多种去多空格的，自动的有 advanved paste，easy typing，手动的有 linter(功能复杂点，主要是格式 md 文档，默认 Ctrl + S 格式文档)，增强编辑 (by 熊猫别熬夜 23.12.12)
+3. Linter 小白慎用，增强编辑好像也有去空行，或者去这里在线处理：[https://laorange.gitee.io/paper-assistant/](https://laorange.gitee.io/paper-assistant/) (by HC 23.12.12)
+
+在 Linter 的设置中对空行的设置如下：
+
+![24.12.14_ObsidianFAQ整理记录.md](https://cdn.pkmer.cn/images/202412141720607.png!pkmer)
+
+> 在第 6 个页面里面还有有很多关于空行的设置 (by 熊猫)
+> ![24.12.14_ObsidianFAQ整理记录.md](https://cdn.pkmer.cn/images/202412141720131.png!pkmer)
+
+### 外部文件如何绝对路径插入，直接用 File 链接打开 (by 熊猫)
+
+![24.12.14_ObsidianFAQ整理记录.md](https://cdn.pkmer.cn/images/202412141720500.png!pkmer)
+
+答：
+
+- 方案一：在资源管理器按住 ctrl 把文件拖进 ob，自动会生成链接到文件 (推荐，但 mac 失效)；
+- 方案二：插件 Better File Link，在 ob 内部打开，在方案一失效下，推荐采用这个方案。
+
+### Obsidian 如何同时滚动两个视图
+
+在 Obsidian 中实现两个视图同步滚动，可以按照以下步骤操作：
+
+1. **分屏并关联标签页**：将当前编辑器切换到想要的模式（如源码模式或实时预览模式），然后在文件的选项中选择左右分屏。接着，在右边的面板中，点击文件选项中的 “关联标签页”，选择左边的标签页，此时两个标签页会出现链接标志，表示关联成功。
+2. **实现同步滚动**：关联成功后，无论是在编辑面板中进行修改，还是滚动浏览其中一个视图，另一个视图都会实时同步显示修改内容或进行同步滚动。
+
+如果要取消关联，关联状态下的面板右上角会显示一个链接符号，点击该符号即可解除面板的关联状态，也可以鼠标右键选择顶部的标签页来取消关联。
+
 ## 输出&导出
 
 ### 怎么把 md 文档导出为图片
@@ -451,6 +519,39 @@ body.clutter-free-headings div.mod-cm6:not(.is-live-preview) div:not(.cm-active)
 - 解法：可以在笔记内切成阅读模式，这样 html 标记就不会影响搜索结果了
 
 ## 编辑
+
+### 阅读渲染不出表格是什么状况吗 (by 熊猫 25.01.11)
+
+有人知道阅读渲染不出表格是什么状况吗 怎么解决 只能在编辑模式看到表格。大部分是正常的，有两个是这样。
+
+![241215_ObsidianFAQ整理记录.md](https://cdn.pkmer.cn/images/202501111736978.png!pkmer)
+
+答：
+
+1. 确保在表格前后都各有**一个空行**。如果你的表格紧挨着其他文本或元素，记得在表格上方和下方各添加一个空行。
+2. 检查表格的 Markdown 格式是否正确。例如，确保列之间的 | 符号对齐，行的数量一致等。以下是一个简单的表格格式示例：
+
+    ```
+    | Header 1 | Header 2 | Header 3 |
+    |----------|----------|----------|
+    | Data 1   | Data 2   | Data 3   |
+    | Data A   | Data B   | Data C   |
+    ```
+
+3. 如果表格已经有空行分隔，但是仍然无法渲染，检查是否有其他插件或主题干扰了 Markdown 的渲染。可以尝试禁用相关插件，或者切换到默认主题进行测试。
+
+### 如何复制笔记里面图片，常用的图片插件有哪些 (by 熊猫 25.01.11)
+
+答：Image Context Menus 插件可以支持图片右键复制图片。
+
+![241215_ObsidianFAQ整理记录.md](https://cdn.pkmer.cn/images/202501111735933.png!pkmer)
+
+常用的图片插件：
+
+1. image toolkit：可以点击放大图片并附带复制图片的功能
+2. Fast Image Cleaner：可以右键快速删除笔记中图片和引用链接
+3. Mousewheel Image zoom： 通过鼠标滚轮调整图片大小
+4. Obsidian Image Converter：可以鼠标拖拽控制图片大小，还会自动转换格式以及图片重命名、标注等等，图片处理功能比较齐全。
 
 ### 页内标题能否隐藏？（by 阿岑）
 
@@ -536,6 +637,12 @@ strong {
 }
 
 ```
+
+### 请问有什么办法在 ob 里不显示 pdf 文件内容，只想在文档里存着？(by 熊猫)
+
+答：用 Opener 插件，可以设置特定后缀的文件采用默认应用打开：
+
+![24.12.14_ObsidianFAQ整理记录.md](https://cdn.pkmer.cn/images/202412141720248.png!pkmer)
 
 ### Obsidian 如何批量、快速管理标签 Tag
 
@@ -645,10 +752,10 @@ Obsidian 中实现标题自动编号，像 Word 一样，而不是我一个个�
 设置→核心插件→每日笔记→勾选【开启时打开每日笔记】
 
 - 每次都打开同一个：指定特殊的笔记
-参看：[[Obsidian 插件：Homepage（像浏览器一样设置起始页）]]
+参看：[[obsidian-homepage|Obsidian 插件：Homepage（像浏览器一样设置起始页）]]
 
 - 像浏览器一样设置起始页
-参看：[[Obsidian 插件：Homepage（像浏览器一样设置起始页）]]
+参看：[[obsidian-homepage|Obsidian 插件：Homepage（像浏览器一样设置起始页）]]
 
 ### Obsidian 如何批量移动多个文件
 

@@ -7,12 +7,12 @@ author: PKMer
 type: other
 draft: true
 editable: false
-modified: 20230910003338
+modified: 20240524095528
 ---
 
 # README
 
-## PKMer 项目介绍
+## PKMer Docs 项目介绍
 
 本项目是一个开源项目，旨在总结和归纳知识管理相关知识和用法技巧。欢迎参与贡献文档，提出建议和需求，使得该项目更好。彼时您将获得除了登上此 Github 项目的贡献榜，和相同志趣的伙伴一起探讨知识管理，还将获得由 Pkmer 组织提供的相应的奖励。
 
@@ -32,8 +32,9 @@ Pkmer，即 `PKM` 和 `er` 的结合，寓意 Personal Knowledge Management 个�
 - [PKM-er/Obsidian-Surfing: An Obsidian plugin that lets you browse the web within Obsidian. ](https://github.com/PKM-er/Obsidian-Surfing)：一个在 Obsidian 里浏览网页的 Obsidian 浏览器插件
 
 ## 加入交流群
-
-- QQ： 825255377
+- 【社区管理员招募中】
+- QQ 1号交流群：825255377
+- QQ 2号交流群：769306712 
 - 微信交流群
   ![image](https://github.com/PKM-er/Pkmer-Docs/assets/42957010/6d2be9bb-362e-4867-97e3-4188050dff20)
 
@@ -52,3 +53,5 @@ Pkmer，即 `PKM` 和 `er` 的结合，寓意 Personal Knowledge Management 个�
 特别鸣谢：
 
 - [Ryooo](https://www.zhihu.com/people/rao-yao-47-68)
+
+

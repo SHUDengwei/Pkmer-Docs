@@ -7,13 +7,16 @@ author: PKMer
 type: awesome
 draft: false
 editable: false
-modified: 20240109121528
+modified: 20241214125753
 ---
 
 # Obsidian 基本使用
 
 - [[笔记删除文件]]
 - [[笔记添加别名]]
+- [[Obsidian的YAML和Frontmatter]]
+- [[在侧边栏显示笔记属性]]
+- [[功能区]]
 - [[标签的使用]]
 - [[标签页]]
 - [[仓库]]
@@ -33,3 +36,4 @@ modified: 20240109121528
 - [[脑图和流程图]]
 - [[Obsidian_URI]]
 - [[块链接与块引用]]
+- [[Obsidian全局搜索功能]]

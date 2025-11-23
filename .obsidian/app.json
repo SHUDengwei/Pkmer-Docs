@@ -1,7 +1,7 @@
 {
   "attachmentFolderPath": "Resource/Images",
   "showInlineTitle": false,
-  "promptDelete": false,
+  "promptDelete": true,
   "readableLineLength": false,
   "alwaysUpdateLinks": true,
   "pdfExportSettings": {
@@ -21,5 +21,6 @@
   "showLineNumber": true,
   "propertiesInDocument": "source",
   "showUnsupportedFiles": true,
-  "strictLineBreaks": false
+  "strictLineBreaks": false,
+  "newFileLocation": "current"
 }

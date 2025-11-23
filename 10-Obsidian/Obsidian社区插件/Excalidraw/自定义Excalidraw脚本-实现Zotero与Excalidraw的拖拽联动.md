@@ -7,7 +7,7 @@ author: 熊猫别熬夜,ProudBenzene,y6n-u9h
 type: other
 draft: false
 editable: false
-modified: 20240116121504
+modified: 20240312002704
 ---
 
 # 自定义 Excalidraw 脚本：实现 Zotero 与 Excalidraw 的拖拽联动
@@ -19,6 +19,14 @@ modified: 20240116121504
 之前分享过 [[Quicker动作之BookxNote和Obsidian联动]] 实现了 Excalidraw 画板与 BookxNote 的联动，需要借助 Quicker 来点击 2 次才能完成一个过程，整体下来还是比较麻烦的（不过我自己还是经常在用），这次将介绍 Zotero 与 Excalidraw 的无缝连接，不需要借助 Quicker，而是通过自定义 Excalidraw 的脚本，直接拖拽 Zotero 的文本或者图片就可以实现 Zotero 到 Excalidraw 的笔记了，**拖拽过来的包含注释和选择的内容**。
 
 > PS：Zotero 7 和 Zotero 6 通用。
+
+## Zotero 快速复制格式设置
+
+因为这个脚本是根据拖入的文本信息来提取的，所以针对 Zotero 的快速复制格式有一定的设置要求，请取设置如下格式：
+
+![自定义 Excalidraw 脚本：实现 Zotero 与 Excalidraw 的拖拽联动](https://cdn.pkmer.cn/images/202401222218378.png!pkmer)
+
+> [!caution] 注意不要设置为**复制为 HTML**，这样匹配不到信息。
 
 ## 实现过程
 
@@ -51,14 +59,32 @@ modified: 20240116121504
  > 1. 如果配置无误的情况下，请重启 Obsidian，重新插入试试；
  > 2. 如果确定自己配置不存在问题却依旧出现问题，请截图并说明自己存在的问题之后在群里再@。
 
-### Zotero to Excalidraw 脚本
+## 脚本安装
+
+脚本安装可以根据源码来安装，也可以通过 Excalidraw 插件提供的脚本安装代码块来安装
+
+- 代码块链接方法：
+	- 优点：一键安装脚本和图标，操作方便，后续脚本更新可以检测
+	- 缺点：国内需要可访问 GitHub 的网络
+- 源码拷贝方式：
+	- 优点：不需要特殊网络
+	- 缺点：需要手动复制源码，这个过程很容易出问题，没有图标，脚本更新无法检测…
+
+> PS：之后我的脚本更新或者 BUG 修复，可能不会更新到网站，而是直接更新到 GitHub，因为这样对我来说比较方便点而且快速点。
+
+### 代码块链接方法
+
+````
+```excalidraw-script-install
+https://raw.githubusercontent.com/PandaNocturne/ExcalidrawScripts/master/PandaScripts/ZoteroToExcalidraw.md
+```
+````
+
+将上述代码块放到一个 **md 文件**，阅读模式下该代码块会显示为 <kbd>安装脚本</kbd>的按钮，点击安装之后，更新为<kbd>脚本已是最新 - 点击重新安装</kbd>，即当前脚本已经安装，在 Excalidraw 画布界面的侧边**Obsidian 工具面板**中可以查看。
+
+## 源码拷贝方式
 
 ```javascript
-/*
-
-```javascript
-*/
-
 let settings = ea.getScriptSettings();
 //set default values on first run
 if (!settings["Zotero Library Path"]) settings["Zotero Library Path"] = { value: false };
@@ -150,21 +176,22 @@ el.ondrop = async function (event) {
 
 		zotero_txt = match_zotero_txt(insert_txt);
 		zotero_author = match_zotero_author(insert_txt);
+		zotero_link = match_zotero_link(insert_txt);
 		if (zotero_author) {
-			zotero_author = `\n(${zotero_author})`;
+			zotero_author = `[(${zotero_author})](${zotero_link})`;
 		};
 		zotero_comment = match_zotero_comment(insert_txt);
 		if (zotero_comment) {
-			zotero_comment = `\n\n📝：${zotero_comment}`;
+			zotero_comment = `\n\n${zotero_comment}`;
 		};
-		zotero_link = match_zotero_link(insert_txt);
 
 		if (zotero_txt) {
 			console.log("ZoteroText");
-
-			let id = await ea.addText(0, 0, `📖：${zotero_txt}${zotero_author}${zotero_comment}`, { width: 600, box: true, wrapAt: 90, textAlign: "left", textVerticalAlign: "middle", box: "box" });
+			const totalText = `${zotero_txt}${zotero_comment}`;
+			let width = totalText.length > 30 ? 600 : totalText.length * 20;
+			let id = await ea.addText(0, 0, `${zotero_txt}${zotero_author}${zotero_comment}`, { width: width, box: true, wrapAt:99, textAlign: "left", textVerticalAlign: "middle", box: "box" });
 			let el = ea.getElement(id);
-			el.link = zotero_link;
+			// el.link = zotero_link;
 			await ea.addElementsToView(true, true, false);
 			if (ea.targetView.draginfoDiv) {
 				document.body.removeChild(ea.targetView.draginfoDiv);
@@ -188,7 +215,7 @@ el.ondrop = async function (event) {
 
 			let id = await ea.addImage(0, 0, zotero_image_name);
 			let el = ea.getElement(id);
-			el.link = zotero_link;
+			el.link = zotero_author;
 
 			await ea.addElementsToView(true, true, false);
 			if (ea.targetView.draginfoDiv) {
@@ -204,7 +231,8 @@ el.ondrop = async function (event) {
 		// 格式化文本(去空格、全角转半角)  
 		insert_txt = processText(insert_txt);
 		console.log("文本格式化");
-		await ea.addText(0, 0, `${insert_txt} `, { width: 400, box: true, wrapAt: 90, textAlign: "left", textVerticalAlign: "middle", box: "box" });
+		let width = insert_txt.length > 30 ? 600 : insert_txt.length * 15;
+		await ea.addText(0, 0, `${insert_txt} `, { width: width, box: true, wrapAt: 90, textAlign: "left", textVerticalAlign: "middle", box: "box" });
 		// let el = ea.getElement(id);
 		await ea.addElementsToView(true, true, false);
 		if (ea.targetView.draginfoDiv) {
@@ -270,6 +298,7 @@ function match_zotero_image(text) {
 	const matches = text.match(regex);
 	return matches ? matches[1] : "";
 }
+
 ```
 
 该脚本的中心思想就是通过拖拽的文本，定位到图片名，从而复制该图片到 OB 的笔记库中，并对拖拽的文本进行处理，去除多余的空格以及全角转半角，拆分为 zotero_txt、zotero_author、zotero_link、zotero_comment、zotero_image 这 5 个文本，自定义组合：

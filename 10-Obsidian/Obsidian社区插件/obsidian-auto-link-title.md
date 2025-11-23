@@ -3,11 +3,11 @@ uid: 20230430001441
 title: Obsidian 插件：Auto Link Title 帮助自动为网页地址增加链接名
 tags: [Obsidian, 插件, 链接, 自动化, 网页标题, 格式化]
 description: Obsidian 插件：Auto Link Title 帮助自动为网页地址增加链接名
-author: OS
+author: 永皓Yh,OS
 type: other
 draft: false
 editable: false
-modified: 20231128170849
+modified: 20240408183651
 ---
 
 # Obsidian 插件：Auto Link Title 帮助自动为网页地址增加链接名
@@ -33,6 +33,18 @@ modified: 20231128170849
 ### 一般情况
 
 当粘贴 [https://github.com/zolrath/obsidian-auto-link-title](https://github.com/zolrath/obsidian-auto-link-title) 时，该插件会获取页面并检索标题，从而得出粘贴内容：`[zolrath/obsidian-auto-link-title: Automatically fetch the titles of pasted links](https://github.com/zolrath/obsidian-auto-link-title)`。
+
+### 一般设置
+
+- 增强复制：从复制的网页地址获取网页标题以 md 格式显示。
+- 打开替换文本标题
+- 黑名单排除：`douyin.com`
+
+### 命令菜单
+
+- Auto Link Title: Enhance existing URL with link and title 使用链接和标题增强现有网址（光标在网址，运行设置的行为修改）
+- Auto Link Title: Normal paste (no fetching behavior) 普通粘贴，不进行修改
+- Auto Link Title: Paste URL and auto fetch title 粘贴，并进行修改
 
 ### 将标题添加到现有的 URL 中
 
@@ -71,7 +83,7 @@ Google 的 Gboard 输入法在键盘上方有一个剪贴板助手快捷方式�
 - 然而，在移动设备上，我们没有使用 Electron 平台，因此我们必须简单地获取该页面。由于 web 服务器的 CORS 限制不允许直接访问，该插件使用 allorigins.win 代理来下载页面。该代理不支持其他字符集，将其返回为问号或乱码。
 
 > [!Tip] 推荐阅读
-> - [[supercharged-links-obsidian]]：可帮助您根据笔记元数据（例如标签或 YAML 前言属性）设置保管库中链接的样式。可以自动向链接添加颜色、表情符号或其他样式，使其更醒目的进行导航。
+> - [[supercharged-links-obsidian]]：可帮助您根据笔记元数据（例如标签或 YAML 前言属性）设置仓库中链接的样式。可以自动向链接添加颜色、表情符号或其他样式，使其更醒目的进行导航。
 > - [[url-into-selection]]：使用常规 Ctrl/Cmd+V 将链接（URL）插入到选定的文本中。也可以反过来，通过命令面板/快捷键将文本插入到选定的链接（URL）中
 > - [[external-favicon]]：可以在不使用任何自定义 CSS 的情况下看到链接对应的网站图标
 > - [[link-favicon]]：可以在不使用任何自定义 CSS 的情况下看到链接对应的网站图标

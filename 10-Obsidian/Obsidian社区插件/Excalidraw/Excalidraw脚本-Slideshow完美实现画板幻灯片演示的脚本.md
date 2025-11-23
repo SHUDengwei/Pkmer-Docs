@@ -1,12 +1,7 @@
 ---
 uid: 20230717151344
 title: Excalidraw 脚本：Slideshow 完美实现画板幻灯片演示的脚本
-tags:
-  - Excalidraw
-  - Slideshow
-  - 幻灯片
-  - PPT
-  - Excalidraw脚本
+tags: [Excalidraw, Slideshow, 幻灯片, PPT, Excalidraw脚本]
 description: Excalidraw脚本Slideshow可以将您的绘图转换为幻灯片演示文稿
 author: 熊猫别熬夜
 type: other
@@ -24,7 +19,7 @@ modified: 20230719221508
 > 脚本作者：zsiczian
 > 脚本描述：该脚本会将您的绘图转换为幻灯片演示文稿
 > 脚本版本：3.0
-> 脚本源码地址：[obsidian-textgenerator-plugin](https://github.com/nhaouari/obsidian-textgenerator-plugin)
+> 脚本源码地址：[Slideshow.md (github.com)](https://github.com/zsviczian/obsidian-excalidraw-plugin/blob/master/ea-scripts/Slideshow.md)
 > 脚本作者演示：[Excalidraw-Obsidian Slideshow 3.0脚本的详细演练 - YouTube](https://www.youtube.com/watch?v=JwgtCrIVeEU&t=6s)
 
 ## 从 Excalidraw 脚本商店安装脚本

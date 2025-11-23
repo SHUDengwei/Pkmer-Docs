@@ -1,13 +1,13 @@
 ---
 uid: 20230329145845
 title: Obsidian 的 CSS 代码片段
-tags: [Obsidian, CSS, snippets, 外观, 主题]
+tags: [moc, CSS]
 description: Obsidian 的 CSS 代码片段
 author: OS,PKMer
 type: awesome
 draft: false
 editable: false
-modified: 20240110121327
+modified: 20250704153846
 ---
 
 # Obsidian 的 CSS 代码片段
@@ -32,6 +32,14 @@ Obsidian 还支持一种外部样式代码引用的方式。
 
 涉及软件界面的修改，有时候可能需要重启软件生效。
 
+## 视频教程
+
+<iframe src="https://player.bilibili.com/player.html?aid=1103514962&bvid=BV1pw4m1276X&cid=1517644008&p=1&autoplay=false" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="90%" height="500"> </iframe>
+
+## Obsidian CSS 主题自定义教程
+
+- [[如何给浅色模式和深色模式写不同的 css 样式]]
+
 ## CSS 修改优秀范例
 
 ### ICON
@@ -41,10 +49,22 @@ Obsidian 还支持一种外部样式代码引用的方式。
 
 ### 界面元素
 
-- [[Obsidian样式-像VSCode一样显示搜索替换框]]
-- [[Obsidian样式-实时编辑下大纲等级符号居右以及Border标题CSS]]
 - [[Obsidian样式-悬浮两侧菜单栏]]
+- [[Obsidian样式-悬浮侧边栏自动弹出，提升工作流效率]]
 - [[Obsidian样式-专注标签页边框]]
+- [[Obsidian样式-多彩便笺背景]]
+- [[Obsidian样式-给Obsidian设置护眼的暖色模式]]
+- [[Obsidian样式-多行标签页堆叠显示]]
+- [[Obsidian样式-全宽的图谱搜索框样式]]
+- [[Obsidian样式-界面透明图片背景]]
+- [[Obsidian样式-标签列表之仿Zotero标签管理的堆叠模式]]
+- [[Obsidian样式-右键菜单分栏，让你的菜单更美观、更高效]]
+
+### 标题&大纲 (Outline)
+
+- [[Obsidian 样式-自定义标题行背景色]]
+- [[Obsidian样式-实时编辑下大纲等级符号居右以及Border标题CSS]]
+- [[Obsidian样式-核心大纲outline标题显示自动编号]]
 
 ### 编辑器
 
@@ -54,13 +74,13 @@ Obsidian 还支持一种外部样式代码引用的方式。
 - [[Obsidian样式-美化代码域对编程语言的样式展示]]
 - [[Obsidian样式-自定义选中文本部分高亮颜色]]
 - [[Obsidian样式-使用CSS-HTML实现分栏]]
+- [[Obsidian样式-用分割线实现分栏]]
 - [[Obsidian样式-笔记页内标题居中]]
 - [[Obsidian样式-实时编辑下大纲等级符号居右以及Border标题CSS]]
+- [[Obsidian 样式-右对齐作者的引用样式]]
 - [[Obsidian样式-分割线样式美化]]
 - [[Obsidian样式-给笔记添加随机背景图]]
 - [[Obsidian样式-美化高亮样式]]
-- [[Obsidian样式-美化行内代码样式]]
-- [[Obsidian样式-编辑模式代码块显示行号]]
 - [[Obsidian样式-修复1.3.7版本标题语法高度问题]]
 - [[Obsidian安卓上利用css修改界面字体]]
 - [[Obsidian样式-缩减栏宽模式下美化笔记内部背景]]
@@ -69,63 +89,105 @@ Obsidian 还支持一种外部样式代码引用的方式。
 - [[Obsidian样式-完成任务时如何取消任务文本的删除线]]
 - [[Obsidian样式-借助CSS打造独立的大屏表格页面]]
 - [[Obsidian样式-使用CSS为白板增加可选的标记功能]]
+- [[Obsidian样式-隐藏 markdown 标记]]
+- [[Obsidian 样式-表格优化]]
+- [[Obsidian样式-笔记内容居左或居中切换]]
+- [[Obsidian样式-分栏分列布局 (Column-Page)]]
+- [[Obsidian样式-在Obsidian内实现网格背景]]
+- [[Obsidian样式-隐私模式之全部变为点点点]]
 
-### 列表&段落
+### 代码块
 
+- [[Obsidian样式-美化行内代码样式]]
+- [[Obsidian样式-编辑模式代码块显示行号]]
+- [[Obsidian样式-圆角代码块样式]]
+
+### 列表
+
+- [[Obsidian样式-自定义大纲缩进线样式]]
+- [[Obsidian样式-给列表添加动态引导线]]
 - [[Obsidian样式-ITS主题列表样式]]
-- [[Obsidian样式-段落首行增加缩进]]
 - [[Obsidian样式-标题-列表-图片美化]]
 - [[Obsidian样式-书签列表样式]]
+- [[Obsidian样式-无序列表卡片式美化]]
+- [[Obsidian样式-列表属性色块美化]]
 
 ### 图片
 
 - [[Obsidian样式-图片点击长按放大]]
 - [[Obsidian样式-调整图片不同布局样式]]
+- [[Obsidian样式-如何让插入笔记中的图片水平居中]]
+- [[Obsidian样式-hover出现图片描述]]
+- [[Obsidian样式-限制笔记内的所有图片宽度]]
 
 ### callout
 
 - [[Obsidian样式-Callout样式]]
+- [[Obsidian样式-如何自定义Callout图标]]
 - [[Obsidian样式-如何实现Blue-topaz自带类表格时间线样式]]
 - [[Obsidian样式-MCL Multi Column]]
+- [[Obsidian样式-用Callout实现的边注]]
+- [[Obsidian样式-PLN主题的callout]]
+- [[Obsidian样式-Vicious主题的callout]]
+- [[Obsidian样式-tabbed Callout]]
+- [[Obsidian样式-使用 Callout 进行正文旁注]]
+- [[Obsidian样式-Minimal主题的Outline Callout]]
+
+### 脚注 (Footnote)
+
+- [[Obsidian样式-重新定义 Obsidian 脚注之侧边显示footnote的优雅体验]]
 
 ### Properties（老称呼 Front-matter，metadata）
 
 - [[Obsidian样式-如何在阅读模式下隐藏Properties]]
 - [[Obsidian样式-修复banner和Properties高度冲突以及多余留白改善]]
+- [[Obsidian样式-控制属性面板(YAML)的显示状态]]
+- [[Obsidian样式-FrontMatter读书笔记]]
+- [[Obsidian样式-YAML属性分栏显示]]
 
 ### 状态栏
 
 - [[Obsidian样式-悬浮状态栏]]
+- [[Obsidian样式-状态栏美化]]
 
 ### 搜索框
 
 - [[Obsidian样式-像VSCode一样显示搜索替换框]]
+
+### 设置面板
+
+- [[Obsidian样式-设置面板样式调整]]
+- [[Obsidian样式-设置界面网格卡片式布局]]
 
 ### 链接
 
 - [[Obsidian网址前自动加图标]]
 - [[Obsidian样式-修改内链的链接颜色]]
 - [[Obsidian样式-自定义链接前缀图标]]
+- [[Obsidian样式-内链与外链样式]]
 
 ### 文件管理器
 
 - [[Obsidian样式-文件浏览器样式]]
 - [[Obsidian样式-文件管理名称滚动效果]]
-- [[Obsidain样式-自定义文件夹图标]]
+- [[Obsidian样式-自定义文件夹图标]]
 - [[Obsidian样式-超长文件名换行]]
+- [[Obsidian样式-分割文件管理器]]
+- [[Obsidian样式-粘性文件夹(Sticky Folder)]]
+- [[优化文件浏览器的显示]]
 
 ### 段落
 
 - [[Obsidian样式-如何自定义段落前后间距]]
 - [[Obsidian样式-特殊标签-让Markdown的文本多彩多色]]
+- [[Obsidian样式-段落首行增加缩进]]
 
-### 列表、待办
+### 待办 (Checkout)
 
 - [[Obsidian样式-待办完成样式]]
 - [[Obsidian样式-自定义待办图标]]
 - [[Obsidian样式-待办事项美化复选框]]
-- [[Obsidian样式-自定义大纲缩进线样式]]
-- [[Obsidian样式-给列表添加动态引导线]]
+- [[Obsidian样式-Minimal主题复选框(Checkout)样式]]
 
 ### 引用
 
@@ -134,12 +196,13 @@ Obsidian 还支持一种外部样式代码引用的方式。
 
 ### 嵌入样式
 
-- [[Obsidian样式-简约的嵌入样式(Embed CSS)]]
+- [[Obsidian样式-简约的嵌入样式]]
 - [[Obsidian样式-修改悬浮预览框的大小]]
 
 ### 表格样式
 
 - [[Obsidian样式-表格样式简明方法]]
+- [[Obsidian 样式-13 种配色 和4 种格式的方案打造更加生动多彩的表格]]
 
 ### 标签 Tag 样式
 
@@ -148,6 +211,13 @@ Obsidian 还支持一种外部样式代码引用的方式。
 ### 标签页
 
 - [[Obsidian样式-标签页Tab样式]]
+- [[Obsidian样式-固定标签页样式美化]]
+- [[Obsidian样式-隐藏右侧标签页标题]]
+
+### 标签页标题栏
+
+- [[Obsidian样式-标签页标题栏的隐藏]]
+- [[Obsidian样式-更小的标签页标题栏]]
 
 ### PDF
 
@@ -173,20 +243,43 @@ Obsidian 还支持一种外部样式代码引用的方式。
 ### 插件样式
 
 - [[Obsidian样式-Calendar插件的样式修改]]
-- [[Obsidian样式-DataView在table视图下标签出现错位断裂的修复]]
-- [[Obsidian样式-简单更改Excalidraw工具栏布局]]
 - [[Obsidian样式-HoverEditor插件弹窗中隐藏Properties属性面板]]
 - [[Obsidian样式-建立书籍电影的卡片化视图]]
+- [[Obsidian插件样式-MySnippets的多栏布局]]
+
+#### Excalidraw
+
 - [[Obsidian样式-简单更改Excalidraw工具栏布局]]
+
+#### Dataview
+
 - [[Obsidian样式-可滚动的Dataview表格视图]]
-- [[Lyrics插件样式-音乐播放界面美化]]
+- [[Obsidian样式-DataView在table视图下标签出现错位断裂的修复]]
+
+#### Note toolbar
+
+- [[Obsidian插件样式-修改note toolbar插件布局像cmenu那样显示]]
 
 #### Thino
 
 - [[Obsidian样式-给Thino加个滚动条]]
 - [[Obsidian样式-给Thino搭配10种热力图颜色]]
 - [[Obsidian样式-Thino单文件时间轴样式]]
-- [[Obsidian样式-Thino 样式]]
+- [[Obsidian样式-Thino样式]]
+- [[Obsidian样式-Thino插件隐藏标志位]]
+- [[Obsidian样式-Thino伪悬浮编辑框]]
+- [[Obsidian样式-Thino展开增强]]
+- [[Obsidian样式-Thino列表模式日期样式调整]]
+- [[Obsidian样式-Thino多文件模式超长文件名优化显示]]
+
+#### Admonition
+
+- [[Admonition样式-彩色跑马灯框]]
+
+#### Kanban
+
+- [[Obsidian样式-看板样式]]
+- [[Obsidian样式-Kanban魔改之四象限模式和康奈尔笔记模式]]
 
 ## 自定义 CSS 简单上手指南
 

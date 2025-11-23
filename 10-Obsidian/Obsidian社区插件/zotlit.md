@@ -1,7 +1,7 @@
 ---
 uid: 20230907001117
 title: Obsidian 插件：ZotLit 最完美的 Zotero 和 Obsidian 联动插件
-tags: []
+tags: [zotero]
 description: 
 author: OS,AidenLx
 type: other
@@ -27,7 +27,7 @@ Zotero 和 Obsidian 都是我个人十分认可的知识管理工具，当然两
 > - 插件说明：与 Zotero 集成的插件，可以创建文献笔记，并从 Zotero 库中插入引用。
 > - 插件分类：['obsidian 插件 ', ' 格式化排版 ', 'word']
 > - 项目地址：[点我访问](https://github.com/PKM-er/obsidian-zotlit)
-> - 国内下载地址：[下载安装](https://pkmer.cn/products/plugin/pluginMarket/?obsidian-zotlit)
+> - 国内下载地址：[下载安装](https://pkmer.cn/products/plugin/pluginMarket/?zotlit)
 
 ZotLit 是一个第三方项目，旨在通过为 Obsidian 和 Zotero 提供一组社区插件，促进 Obsidian.md 和 Zotero 之间的集成。以下是 zotlit 官方文档和由 pkmer 贡献者 alephpiece 贡献的教程。
 
@@ -78,4 +78,6 @@ ZotLit 是一个第三方项目，旨在通过为 Obsidian 和 Zotero 提供一�
 
 ## 视频教程
 
-<iframe src="https://player.bilibili.com/player.html?aid=964486961&bvid=BV1gH4y1k7gz&cid=1354499856&p=1&autoplay=false" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="80%" height="500"> </iframe>
+<iframe src="https://player.bilibili.com/player.html?aid=964486961&bvid=BV1gH4y1k7gz&cid=1354499856&p=1&autoplay=false" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="90%" height="500"> </iframe>
+
+<iframe src="https://player.bilibili.com/player.html?aid=1403444421&bvid=BV18r421G7Fg&cid=1511572800&p=1&autoplay=false" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="90%" height="500"> </iframe>

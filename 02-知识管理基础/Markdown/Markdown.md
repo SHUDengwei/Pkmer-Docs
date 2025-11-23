@@ -1,19 +1,20 @@
 ---
 uid: 20230328202827
-title: Markdown 基础
+title: Markdown 基础入门
 tags: [Markdown]
 description: Markdown 基础语法，标题，大纲，有序列表，无序里欸包，图片，表格，任务列表，语法
-author: 
+author: OS,PKMer
 type: basic
 draft: false
 editable: true
-modified: 20231214140355
+modified: 20250116113435
 ---
 
-# Markdown 基础
+# Markdown 基础入门
 
-> [!warning]
-> 本文只包含 Markdown 基础语法，并不包含笔记软件特定语法，这样区分以便读者选择通用语法使用，以便后续迁移笔记软件。
+> [!info]
+> - 本文只包含 Markdown 基础语法，并不包含笔记软件特定语法，这样区分以便读者选择通用语法使用，以便后续迁移笔记软件。
+> 更全面的入门文档可以看这篇 [[Markdown超级教程 Obsidian版]]
 
 ## 什么是 Markdown?
 
@@ -434,6 +435,9 @@ For example, you can embed Twitter tweets like so as suggested by search results
 
 要添加表，请使用三个或多个连字符（`---`）创建每列的标题，并使用管道（`|`）分隔每列。您可以选择在表的任一端添加管道。
 
+> [!tips] 提示
+> 如果你使用的是 Obsidian 或者类似的工具，那么一般右键插入也可以快速完成此操作
+
 ```
 | 行/列 | 列名2 | 列明3 |
 | ----- | ----- | ----- |
@@ -498,6 +502,9 @@ For example, you can embed Twitter tweets like so as suggested by search results
 脚注使您可以添加注释和参考，而不会使文档正文混乱。当您创建脚注时，带有脚注的上标数字会出现在您添加脚注参考的位置。读者可以单击链接以跳至页面底部的脚注内容。
 
 要创建脚注参考，请在方括号（`[^1]`）内添加插入符号和标识符。标识符可以是数字或单词，但不能包含空格或制表符。标识符仅将脚注参考与脚注本身相关联 - 在输出中，脚注按顺序编号。
+
+> [!tips] 提示
+> 如果你使用的是 Obsidian 或者类似的工具，那么一般鼠标右键，在菜单中选择插入也可以快速完成此操作
 
 在括号内使用另一个插入符号和数字添加脚注，并用冒号和文本（`[^1]: My footnote.`）。您不必在文档末尾添加脚注。您可以将它们放在除列表，块引号和表之类的其他元素之外的任何位置。
 

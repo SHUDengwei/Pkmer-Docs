@@ -7,7 +7,7 @@ author: Windysoul,Huajin,PKMer
 type: other
 draft: false
 editable: false
-modified: 20231209174945
+modified: 20240506112118
 ---
 
 # Obsidian 插件：Dataview
@@ -16,7 +16,7 @@ modified: 20231209174945
 > 插件 ID：dataview
 > 插件作者：Michael Brenan
 > 插件描述：为 Obsidian 提供数据查询能力，这需要学习一些较为简单的语法，但可以实现丰富的查询和组合效果。包括生成表格，标签，跟踪特定的笔记变化，选择具体笔记内容。
-> 插件版本：0.5.55
+> 插件版本：0.5.66
 > 插件源码地址：[obsidian-dataview](https://github.com/blacksmithgu/obsidian-dataview)
 > 插件文档地址：[Dataview Doc](https://blacksmithgu.github.io/obsidian-dataview/)
 > 国内下载地址：[下载安装](https://pkmer.cn/products/plugin/pluginMarket/?dataview)
@@ -42,7 +42,7 @@ Dataview 插件的用途主要有三个方面。
 - **基本语法部分**：共有 23 篇文章，从元数据开始讲起，介绍了所有 dataview 查询你会用到操作符、函数。如果你想系统的学习 dataview，不妨从这里一篇篇往下看。
 - **实例展示**：共有 20 篇文章，每个操作符和每个函数的简单使用示例和进阶使用实例，不知道怎么用某个操作符或者函数就来这里看看。
 - **语法实战**：感谢群友 Windysoul 撰写的 10 篇文章，这部分介绍了一些 dataview 可能的使用场景，附有具体代码。
-- **社区实践**：这部分文章会持续更新，目前已经有 25 篇分享了 dataview 使用的技巧。感谢群友 @calmwaves @劉同學 的分享。其他愿意分享 dataview 使用经验和技巧的也可以放在这里。
+- **社区实践**：这部分文章会持续更新，目前已经有 25 篇分享了 dataview 使用的技巧。感谢群友 @calmwaves @劉同學 的分享，感谢群友 @秋暖 纠正的大量文字错误。其他愿意分享 dataview 使用经验和技巧的也欢迎放在这里。
 
 ### [[Dataview基本语法|开篇-Dataview基本语法]]
 
@@ -58,8 +58,8 @@ Dataview 插件的用途主要有三个方面。
 - [[22 - 查询字段]]
 - [[23 - 操作符]]
 - [[24 - 表达式]]
-- [[30 - Function 函数]]
-- [[31 - DQL 与 SQL 的异同]]
+- [[30 - Dataview 提供的函数 Function]]
+- [[31 - Dataview 中的构造函数]]
 - [[32 - Dataview 中的数值运算函数]]
 - [[33 - Dataview 中的对象操纵函数]]
 - [[34 - Dataview 中的字符串操纵函数]]
@@ -68,8 +68,9 @@ Dataview 插件的用途主要有三个方面。
 - [[41 - DQL 与 SQL 的异同]]
 - [[42 - ISO 8601]]
 - [[43 - YAML 基础]]
+- [[44 - Dataview 设置介绍]]
 
-### [[Dataview 实例展示|拓展-Dataview实例展示]]
+### [[Dataview语法实战]]
 
 - [[Dataview 表格简单查询示例]]；
 - [[Dataview 表格进阶查询示例]]；
@@ -85,11 +86,6 @@ Dataview 插件的用途主要有三个方面。
 - [[Dataview语法实战-FLATTEN操作符进阶示例]]；
 - [[Dataview语法实战-GROUP BY 操作符简单示例]]；
 - [[Dataview语法实战-GROUP BY 操作符进阶示例]]；
-- [[31 - Dataview 中的构造函数|Dataview 中的构造函数]]；
-- [[32 - Dataview 中的数值运算函数|Dataview 中的数值运算函数]]；
-- [[33 - Dataview 中的对象操纵函数|Dataview 中的对象、数组操纵函数]]；
-- [[34 - Dataview 中的字符串操纵函数|Dataview 中的字符串操纵函数]]；
-- [[35 - Dataview 中的实用函数|Dataview 中的实用函数]]；
 
 ### [[Dataview语法实战|进阶-Dataview语法实战]]
 
@@ -105,11 +101,10 @@ Dataview 插件的用途主要有三个方面。
 
 ### [[Dataview社区实践经验|应用-Dataview社区实践经验]]
 
-- [[Dataview实战-提取并展示笔记脚注]]
-- [[Dataview实战-Obsidian dataview 引用本地图片]]
-- [[Dataview实战-发挥元数据的魔力-掌握 Dataview 的四大查询类型]]
 - [[Dataview实战-定制你的数据表格并为表格列添加个性化样式]]
-- [[Dataview实战-制作一个倒计时或者正计时列表]]
+- [[Dataview实战-发挥元数据的魔力-掌握 Dataview 的四大查询类型]]
+- [[Dataview实战-提取并展示笔记脚注]].
+- [[Dataview实战-Obsidian dataview 引用本地图片]].
 - [[Obsidian样式-DataView在table视图下标签出现错位断裂的修复]]
 - [[Dataview实战-通过Dataview列出标签所在段落内容]]
 - [[Dataview实战-如何不显示笔记链接]]
@@ -129,6 +124,12 @@ Dataview 插件的用途主要有三个方面。
 - [[Dataview实战-列出每年的某个月份的检索结果应该怎么写]]
 - [[Dataview实战-列出以某个字母开头的文件或元数据]]
 - [[Dataview实战-如何查询结果的数目]]
-- [[每日字数的热力图|Dataview实战-每日字数的热力图]]
-- [[Obsidian样式-可滚动的Dataview表格视图|Dataview实战-给 Dataview 加个滚动条]]
-- [[Dataview实战-进度条]]
+- [[Dataview实战-展示笔记总数]]
+- [[Obsidian汇总显示笔记内的关键信息]]
+- [[如何给 DataviewJS 中的 TaskList 的任务列表排序]]
+
+## Dataview 达人之路系列
+
+- [[Obsidian达人成长之路-1-使用终极工具Dataview 释放笔记库的潜力-DQL查询语言]]
+- [[Obsidian达人成长之路-2-使用终极工具 Dataview 释放笔记库的潜力 · JavaScript API]]
+- [[Obsidian达人成长之路-3-使用终极工具 Dataview 释放笔记库的潜力-案例讲解]]
